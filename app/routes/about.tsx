@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useNavigate } from "@remix-run/react";
 import { Page, Navbar, BlockTitle, Block, BlockFooter, BlockHeader, NavLeft, Link, NavTitle } from 'framework7-react';
 
 export const meta: MetaFunction = () => {
@@ -11,30 +10,23 @@ export const meta: MetaFunction = () => {
 
 export default function About() {
 
-	const navigate = useNavigate();
-
-	const handelBack = () => {
-		console.log("Navigating to Home Page");
-		navigate("/");
-		
-	}
-
 	return (
 		<Page
 			name="About"
+			// hideBarsOnScroll={true}
 			// noSwipeback={false}
 			// hideNavbarOnScroll={true}
-			ptr={true}
+			// ptr={true}
 		>
 			{/* Top Navbar */}
 			<Navbar>
-				<NavLeft backLink="Back" onBackClick={handelBack}></NavLeft>
+				<NavLeft backLink="Back"></NavLeft>
 				<NavTitle>About</NavTitle>
 			</Navbar>
 			{/* Page Content */}
 			<BlockTitle>Block Title</BlockTitle>
 			<Block>
-				<p>
+				<p className="!text-red-500">
 					Here comes paragraph within content block. Donec et nulla auctor massa pharetra adipiscing
 					ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis,
 					vulputate turpis vel, sagittis felis.{' '}
@@ -140,9 +132,7 @@ export default function About() {
 				</p>
 			</Block>
 			<Block>
-				<Link 
-					onClick={handelBack}
-				>Home</Link>
+				<Link href="/">Home</Link>
 			</Block>
 		</Page>
 	)

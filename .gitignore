@@ -4,3 +4,6 @@ node_modules
 /build
 .env
 .vercel
+
+# Local Netlify folder
+.netlify
