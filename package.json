@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@netlify/functions": "^3.0.0",
+    "@netlify/remix-runtime": "^2.3.1",
     "@remix-pwa/worker-runtime": "^2.1.4",
     "@remix-run/node": "^2.15.2",
     "@remix-run/react": "^2.15.2",
@@ -20,14 +22,15 @@
     "@tailwindcss/vite": "^4.0.0",
     "framework7": "^8.3.4",
     "framework7-react": "^8.3.4",
+    "isbot": "^4.1.0",
     "netlify-cli": "^18.0.2",
     "npm": "^11.0.0",
-    "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-css": "^1.0.4"
   },
   "devDependencies": {
+    "@netlify/remix-adapter": "^2.6.0",
     "@remix-pwa/dev": "^3.1.0",
     "@remix-run/dev": "^2.15.2",
     "@types/react": "^18.2.20",
