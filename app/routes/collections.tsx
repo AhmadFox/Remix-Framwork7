@@ -1,9 +1,17 @@
+import { MetaFunction } from '@remix-run/node';
 import { Page, Navbar, List, ListItem, Searchbar, BlockTitle } from 'framework7-react';
+
+export const meta: MetaFunction = () => {
+	return [
+		{ title: "Remix App - Collections" },
+		{ name: "description", content: "Collections Page" },
+	];
+};
 
 export default function Collections() {
   return (
     <Page>
-      <Navbar title="Collections" backLink="Back" />
+      <Navbar title="Collections" backLink=" " />
       <Searchbar
         placeholder="Search collections"
         clearButton={true}

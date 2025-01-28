@@ -1,10 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Page, Navbar, BlockTitle, Block, BlockFooter, BlockHeader, NavLeft, Link, NavTitle } from 'framework7-react';
+import { NavLink } from "@remix-run/react";
+import { Page, Navbar, BlockTitle, Block, BlockFooter, BlockHeader, NavLeft, NavTitle } from 'framework7-react';
 
 export const meta: MetaFunction = () => {
 	return [
 		{ title: "Remix App - About" },
-		{ name: "description", content: "Welcome to About Page!" },
+		{ name: "description", content: "About Page" },
 	];
 };
 
@@ -20,7 +21,13 @@ export default function About() {
 		>
 			{/* Top Navbar */}
 			<Navbar>
-				<NavLeft backLink="Back"></NavLeft>
+				<NavLeft>
+					<NavLink to="/" className="w-6">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+							<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+						</svg>
+					</NavLink>
+				</NavLeft>
 				<NavTitle>About</NavTitle>
 			</Navbar>
 			{/* Page Content */}
@@ -130,9 +137,6 @@ export default function About() {
 					Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit
 					vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis.{' '}
 				</p>
-			</Block>
-			<Block>
-				<Link href="/">Home</Link>
 			</Block>
 		</Page>
 	)

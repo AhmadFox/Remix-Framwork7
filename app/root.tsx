@@ -6,7 +6,7 @@ import {
 	ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import {AppLayout} from './components/AppLayout'
+import { AppLayout } from './components/AppLayout'
 
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },

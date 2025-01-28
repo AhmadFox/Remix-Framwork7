@@ -9,7 +9,15 @@
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["@remix-run/node", "vite/client"],
+    "types": [
+      "@remix-run/node",
+      "vite/client",
+      "vite-plugin-pwa/info",
+      "vite-plugin-pwa/pwa-assets",
+      "vite-plugin-pwa/react",
+      "@vite-pwa/remix",
+      "@vite-pwa/remix/remix-sw"
+    ],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
