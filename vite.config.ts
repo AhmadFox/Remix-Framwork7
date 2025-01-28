@@ -6,56 +6,20 @@ import tailwindcss from '@tailwindcss/vite';
 import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 
 declare module "@remix-run/node" {
-  interface Future {
-    v3_singleFetch: true;
-  }
+	interface Future {
+		v3_singleFetch: true;
+	}
 }
 
 const { RemixVitePWAPlugin, RemixPWAPreset } = RemixVitePWA();
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    netlifyPlugin(),
-    remix({
-    future: {
-      v3_fetcherPersist: true,
-      v3_relativeSplatPath: true,
-      v3_throwAbortReason: true,
-      v3_singleFetch: true,
-      v3_lazyRouteDiscovery: true,
-    },
-    presets: [RemixPWAPreset()],
-  }), tsconfigPaths(), RemixVitePWAPlugin({
-    registerType: "autoUpdate",
-    injectRegister: false,
-
-    pwaAssets: {
-      disabled: false,
-      config: true,
-    },
-
-    manifest: {
-      name: "PWA",
-      short_name: "PWA",
-      description: "Test Remix PWA app",
-      theme_color: "#ffffff",
-    },
-
-    workbox: {
-      globPatterns: ["**/*.{js,html,css,png,svg,ico}"],
-      cleanupOutdatedCaches: true,
-      clientsClaim: true,
-    },
-
-    devOptions: {
-      enabled: false,
-      suppressWarnings: true,
-      navigateFallback: "/",
-      navigateFallbackAllowlist: [/^\/$/],
-      type: "module",
-    },
-  })],
+	plugins: [
+		remix(),
+		tailwindcss(),
+		tsconfigPaths(),
+		netlifyPlugin()
+	],
 });
 
-    // "start": "remix-serve ./build/server/index.js",
+// "start": "remix-serve ./build/server/index.js",
