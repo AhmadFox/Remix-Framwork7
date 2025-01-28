@@ -74,14 +74,6 @@
 .dark .demo-list-icon {
   background-color: #555;
 }
-.icon-f7 {
-  background: url(../img/f7-icon.png) no-repeat center;
-  background-size: cover;
-}
-.icon-vi {
-  background: url(../img/vi-icon.png) no-repeat center;
-  background-size: cover;
-}
 
 .ios .demo-list-icon,
 .ios .icon-f7,
