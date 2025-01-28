@@ -3,7 +3,6 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { RemixVitePWA } from "@vite-pwa/remix";
 import tailwindcss from '@tailwindcss/vite';
-
 import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 
 declare module "@remix-run/node" {
